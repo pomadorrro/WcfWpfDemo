@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FatClient"
         mc:Ignorable="d"
-        Title="Ожидание подключения" Height="150" Width="300" Closed="OnPopupWindowClosed">
+        Title="Ожидание подключения" SizeToContent="WidthAndHeight" Closed="OnPopupWindowClosed">
     <Grid>
-        <TextBlock Name="Message" Height="50" Width="200">
+        <TextBlock Name="Message" Margin="10" >
         Выполняется подключение...
         </TextBlock>
     </Grid>

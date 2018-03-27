@@ -12,6 +12,6 @@ public class IntroductionService : IIntroductionService
 {
     bool IIntroductionService.Introduce(string str)
     {
-        return str.Equals("");
+        return str.Equals("00C2C6EF1B81");
     }
 }

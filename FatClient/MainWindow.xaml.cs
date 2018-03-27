@@ -47,7 +47,11 @@ namespace FatClient
             if (connected)
             {
                 popupWindow.Hide();
-                SetButtonEnabled(button, true);
+                FotoAlbum fotoAlbum = new FotoAlbum();
+                fotoAlbum.Show();
+                this.Close();
+                
+                //SetButtonEnabled(button, true);
             }
             else
             {

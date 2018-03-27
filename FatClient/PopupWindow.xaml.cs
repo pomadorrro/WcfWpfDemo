@@ -31,7 +31,7 @@ namespace FatClient
         }        
 
         /// <summary>
-        /// Send message to the parent window's button to make it enabled.
+        /// Send message to the parent window to make button enabled.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="FatClient.FotoAlbum"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"        
+        xmlns:local="clr-namespace:FatClient"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="FotoAlbum" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ComboBox Width="200" Height="35" Margin="10,10,0,0"
+                  VerticalAlignment="Top" HorizontalAlignment="Left" DisplayMemberPath ="TagName"
+                  ItemsSource="{Binding UnselectedTags}" 
+                  SelectedItem ="{Binding SelectedTag, Mode=TwoWay}">
+
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="PropertyChanged">
+                    <i:InvokeCommandAction Command="{Binding Select}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+        </ComboBox>
+        
+        <ComboBox 
+            Width="200" Height="35" Margin="10,67,0,0"
+            VerticalAlignment="Top"  HorizontalAlignment="Left" DisplayMemberPath ="TagName"            
+            ItemsSource="{Binding SelectedTags}" >
+        </ComboBox>
+        
+    </Grid>
+    
+</Window>
